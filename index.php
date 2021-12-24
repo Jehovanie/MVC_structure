@@ -1,5 +1,8 @@
 <?php
 
+include_once("./_config/config.php");
+include_once("./_config/db.php");
+
 if (isset($_GET['page']) && !empty($_GET['page'])) {
 
     $page = trim(strtolower($_GET['page']));
@@ -17,3 +20,7 @@ if (in_array($page . '_controller.php', $allpages)) {
 } else {
     echo "Error : 404 ";
 }
+
+
+// var_dump($_SESSION);
+// die();
