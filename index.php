@@ -2,6 +2,17 @@
 
 include_once("./_config/config.php");
 include_once("./_config/db.php");
+include_once("./_fonctions/fonction.php");
+
+
+include_once("./_classes/Articles.php");
+include_once("./_classes/Authors.php");
+include_once("./_classes/Categories.php");
+
+
+$author = Categories::getAllCategories();
+debug($author);
+exit;
 
 if (isset($_GET['page']) && !empty($_GET['page'])) {
 
@@ -10,7 +21,7 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
     $page = "home";
 }
 
-$allpages = scandir('controllers/');
+$allpages = scandir('controllers/'); // scan all element.
 
 if (in_array($page . '_controller.php', $allpages)) {
 
