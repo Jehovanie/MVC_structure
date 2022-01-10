@@ -16,14 +16,14 @@ class Authors
      * @param  mixed $id
      * @return void
      */
-    function __construct($id)
+    function __construct($id, $firstname)
     {
         global $db;
 
         $id = str_secur($id);
 
-        $reqAuthor = $db->prepare('SELECT * FROM authors WHERE id = ?');
-        $reqAuthor->execute([$id]);
+        $reqAuthor = $db->prepare('SELECT * FROM authors WHERE id = ? AND firstname = ?');
+        $reqAuthor->execute([$id, $firstname]);
 
         $data = $reqAuthor->fetch();
 

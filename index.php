@@ -10,9 +10,6 @@ include_once("./_classes/Authors.php");
 include_once("./_classes/Categories.php");
 
 
-$author = Categories::getAllCategories();
-debug($author);
-exit;
 
 if (isset($_GET['page']) && !empty($_GET['page'])) {
 

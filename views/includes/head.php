@@ -19,6 +19,10 @@
 <!-- CSS Styles -->
 
 <!--link rel="Stylesheet" href="/assets.styles/css/styles.css" / -->
-<link rel="Stylesheet" href="../../../bootstrap/css/bootstrap.css" />
+<!-- Bootstrap core CSS -->
+<link href="assets/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="assets/styles/style.css" rel="stylesheet">
+
+<!--link rel="Stylesheet" href="../../../bootstrap/css/bootstrap.css" />
 <link rel="Stylesheet" href="../../../bootstrap/fontawesome/attribution.js" />
-<link rel="Stylesheet" href="../../../bootstrap/js/bootstrap.js" />
+<link rel="Stylesheet" href="../../../bootstrap/js/bootstrap.js" /-->
