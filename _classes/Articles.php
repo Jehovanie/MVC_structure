@@ -13,6 +13,12 @@ class Articles
     public $category;
 
 
+    /**
+     * __construct
+     * Article constructor
+     * @param  mixed $id
+     * @return void
+     */
     function __construct($id)
     {
         global $db;
@@ -37,6 +43,11 @@ class Articles
         $this->category = $data["category"];
     }
 
+    /**
+     * getAllArticles
+     * Envoie tous les articles
+     * @return void
+     */
     static function getAllArticles()
     {
 
@@ -52,5 +63,41 @@ class Articles
         $repArticles->execute([]);
 
         return  $repArticles->fetchAll();
+    }
+
+    /**
+     * getlastArticle
+     * Envoie tous les articles
+     * @return void
+     */
+    static function getlastArticle($categoryId = null)
+    {
+
+        global $db;
+
+        if ($categoryId == null) {
+            $repArticles = $db->prepare('
+                SELECT a.* , au.firstname ,au.lastname, c.name AS category
+                FROM articles a
+                INNER JOIN authors au ON au.id = a.author_id
+                INNER JOIN categories c ON c.id = a.category_id
+                ORDER BY id DESC
+                LIMIT 1
+            ');
+            $repArticles->execute([]);
+        } else {
+            $repArticles = $db->prepare('
+                SELECT a.* , au.firstname ,au.lastname, c.name AS category
+                FROM articles a
+                INNER JOIN authors au ON au.id = a.author_id
+                INNER JOIN categories c ON c.id = a.category_id
+                WHERE c.id = ? 
+                ORDER BY id DESC
+                LIMIT 1
+            ');
+            $repArticles->execute([$categoryId]);
+        }
+
+        return  $repArticles->fetch();
     }
 }

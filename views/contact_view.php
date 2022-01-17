@@ -8,12 +8,24 @@
 
 <body>
     <?php include_once "./views/includes/header.php" ?>
-
-    <section class="container my-4">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus aliquam iste alias sunt similique animi in numquam? Voluptatibus voluptatum sed similique accusantium, nihil cum impedit saepe blanditiis dolor. Facilis.
-            Assumenda praesentium numquam consectetur facere cum omnis optio corporis? Delectus dignissimos et ducimus odit quos obcaecati modi id accusantium blanditiis, aliquam eligendi quae impedit ut hic commodi! Laborum, cumque voluptas.
-            Ipsam hic repudiandae fugit laborum vitae, illum aspernatur autem nostrum? Molestias pariatur placeat modi architecto neque, odit quaerat dolore exercitationenis animi unde est voluptatem earum, laudantium corporis cum!</p>
-    </section>
+    <h1>
+        Contact ...
+    </h1>
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="email"> Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="firstname">Prénom</label>
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Jheo">
+        </div>
+        <div class="form-group">
+            <label for="text">Message</label>
+            <textarea class="form-control" id="text" name="message" rows="8" placeholder="Mon message ... "></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary my-2" name="btnContact"> Envoye mon message </button>
+    </form>
 
     <?php include_once "./views/includes/footer.php" ?>
 </body>
