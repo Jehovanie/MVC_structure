@@ -19,6 +19,4 @@
 <!-- CSS Styles -->
 
 <!--link rel="Stylesheet" href="/assets.styles/css/styles.css" / -->
-<link rel="Stylesheet" href="../../../bootstrap/css/bootstrap.css" />
-<link rel="Stylesheet" href="../../../bootstrap/fontawesome/attribution.js" />
-<link rel="Stylesheet" href="../../../bootstrap/js/bootstrap.js" />
+<link rel="Stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />

@@ -14,7 +14,7 @@
         <div class="container my-5 py-5">
             <div class="row">
                 <div class="col-md-6 ">
-                    <img class="rounded w-100 h-250" src="http://localhost/MVC_course/assets/images/images.jpg" alt=" first Image ">
+                    <img class="rounded w-100 h-250" src="https://random.imagecdn.app/500/150" alt=" first Image ">
                 </div>
                 <div class="col-md-6 banner-desc lh-lg">
                     <h1 class="text-capitalize py-3 redressed">
@@ -31,6 +31,8 @@
     </section>
 
     <?php include_once "./views/includes/footer.php" ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

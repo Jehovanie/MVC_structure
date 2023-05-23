@@ -48,7 +48,7 @@ define("WEBSITE_FACEBOOK_IMAGE", "");
 
 // DataBase informations
 
-define("DATABASE_HOST", "localhost");
+define("DATABASE_HOST", "172.0.0.1");
 define("DATABASE_NAME", "testMvc");
-define("DATABASE_USER", "Jehovanie");
-define("DATABASE_PASSWORD", "jheo1998");
+define("DATABASE_USER", "root");
+define("DATABASE_PASSWORD", "");

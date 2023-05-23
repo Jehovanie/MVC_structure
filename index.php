@@ -11,8 +11,6 @@ include_once("./_classes/Categories.php");
 
 
 $author = Categories::getAllCategories();
-debug($author);
-exit;
 
 if (isset($_GET['page']) && !empty($_GET['page'])) {
 
@@ -33,5 +31,5 @@ if (in_array($page . '_controller.php', $allpages)) {
 }
 
 
-// var_dump($_SESSION);
+var_dump($_SESSION);
 // die();
